@@ -6,7 +6,7 @@ $(document).ready(function () {
         debugger
         //conectando com api web
         var nCdServico = $('#codigo').val();
-        var servicos = $('#servicos').val();
+        var servicos = $('servicos').val();
         var cepOrigem = $('#cepOrigem').val();
         var cepDestino = $('#cepDestino').val();
         var nVlPeso = $('#peso').val();
