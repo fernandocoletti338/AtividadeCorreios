@@ -3,7 +3,7 @@ $(document).ready(function () {
     //adicionando uma função ao click do botão
     $('#Button').click(function () {
 
-     debugger
+     
         //conectando com api web
         var nCdEmpresa = $('#codigo').val();
         var nCdServico = $('#servico').val();
