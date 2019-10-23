@@ -3,10 +3,10 @@ $(document).ready(function () {
     //adicionando uma função ao click do botão
     $('#Button').click(function () {
 
-        debugger
+     debugger
         //conectando com api web
-        var nCdServico = $('#codigo').val();
-        var servicos = $('servicos').val();
+        var nCdEmpresa = $('#codigo').val();
+        var nCdServico = $('#servico').val();
         var cepOrigem = $('#cepOrigem').val();
         var cepDestino = $('#cepDestino').val();
         var nVlPeso = $('#peso').val();
@@ -14,10 +14,10 @@ $(document).ready(function () {
         var nVlComprimento = $('#comprimento').val();
         var nVlAltura = $('#altura').val();
         var nVlLargura = $('#largura').val();
-        var diametro = $('#diametro').val();
-        var maoPropria = $('#maoPropria').val();
-        var valorDeclarado = $('#valorDeclarado').val();
-        var avisoDeRecebimento = $('#avisoDeRecebimento').val();
+        var nVlDiametro = $('#diametro').val();
+        var sCdMaoPropria = $('#maoPropria').val();
+        var nVlValorDeclarado = $('#valorDeclarado').val();
+        var sCdAvisoRecebimento = $('#avisoDeRecebimento').val();
 
         //http://usysweb.com.br/api/correiosambev.php isto e nossa base de informações nossa url que acessamos os dados
 
