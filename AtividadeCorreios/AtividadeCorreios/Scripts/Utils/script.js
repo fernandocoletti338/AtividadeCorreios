@@ -2,8 +2,8 @@
 $(document).ready(function () {
     //adicionando uma função ao click do botão
     $('#Button').click(function () {
-
-     debugger
+        debugger
+    
         //conectando com api web
         var nCdEmpresa = $('#codigo').val();
         var nCdServico = $('#servico').val();
@@ -26,7 +26,9 @@ $(document).ready(function () {
         //nCdServico=04510&sCepDestino=" + cepDestino + "&sCepOrigem=" + cepOrigem   tesmo nosso "where" que passa as informações 
         //para nossa base de dados
 
-        $.getJSON("http://usysweb.com.br/api/correiosambev.php?nCdServico=" + nCdServico + "&sCepDestino=" + cepDestino + "&sCepOrigem=" + cepOrigem + "&nVlPeso=" + nVlPeso + "&nCdFormato=" + nCdFormato + "&nVlComprimento=" + nVlComprimento + "&nVlAltura=" + nVlAltura + "&nVlLargura=" + nVlLargura, function (data) {
+        var url = "http://usysweb.com.br/api/correiosambev.php?nCdServico=" + nCdServico + "&sCepDestino=" + cepDestino + "&sCepOrigem=" + cepOrigem + "&nVlPeso=" + nVlPeso + "&nCdFormato=" + nCdFormato + "&nVlComprimento=" + nVlComprimento + "&nVlAltura=" + nVlAltura + "&nVlLargura=" + nVlLargura;
+
+        $.getJSON(url, function (data) {
 
             alert(data.cServico.Valor + " " + data.cServico.PrazoEntrega + " " + data.cServico.ValorSemAdicionais + " " + data.cServico.ValorMaoPropria + " " + data.cServico.ValorAvisoRecebimento + " " + data.cServico.ValorValorDeclarado + " " + data.cServico.EntregaDomiciliar + " " + data.cServico.EntregaSabado); 
 
