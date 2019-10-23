@@ -2,91 +2,103 @@
 <html>
 <head>
     <meta charset="utf-8" />
-
-    <link href="Content/bootstrap.css" rel="stylesheet" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://localhost:44346/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Correios</title>
 </head>
-<body>
+<body style="height:100vh">
+    <div class="container-fluid h-100">
+        <div class="row d-flex align-content-center d-flex justify-content-center h-100">
+            <div class="col-md-3">
+                <form name="frm" action="frete2.asp" method="post" ID="Form1">
 
-    <form name="frm" action="frete2.asp" method="post" ID="Form1">
-        <fieldset style="background: EEEEEE;">
-            <legend>Calculo de Frete</legend>
-            <div>
-                <span style="width:130px;">Codigo:</span>
-                <span><input type="text" name="codigo" value=""></span>
+                    <legend>Calculo de Frete</legend>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Codigo:</span>
+                        <span><input id="codigo" type="text" name="codigo" placeholder="Informe o codigo"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Senha:</span>
+                        <span><input id="senha" type="password" name="senha" placeholder="Informe a senha"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Serviços:</span>
+                        <span><input id="servicos" type="text" name="servicos" placeholder="Informe o servicos"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Cep Origem:</span>
+                        <span><input id="cepOrigem" type="text" name="cepori" placeholder="Informe o cep origem"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Cep Destino:</span>
+                        <span><input id="cepDestino" type="text" name="cepdes" placeholder="Informe o cep destino"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Peso:</span>
+                        <span><input id="peso" type="text" name="peso" placeholder="Informe o peso"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Formato:</span>
+                        <span id="formato">
+                            <select name="formato" size="1">
+                                <option value="1">Caixa</option>
+                                <option value="1">Pacote</option>
+                                <option value="1">Rolo</option>
+                                <option value="1">Prisma</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Comprimento:</span>
+                        <span><input id="comprimento" type="text" name="comprimento" placeholder="Informe o comprimento"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Altura:</span>
+                        <span><input id="altura" type="text" name="altura" placeholder="Informe a altura"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Largura:</span>
+                        <span><input id="largura" type="text" name="largura" placeholder="Informe a largura"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Diâmetro:</span>
+                        <span><input id="diametro" type="text" name="diametro" placeholder="Informe o diametro"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Mão própria:</span>
+                        <span id="maoPropria">
+                            <select name="maopropria" size="1">
+                                <option value="S">Sim</option>
+                                <option value="N">Não</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Valor declarado:</span>
+                        <span><input id="valorDeclarado" type="text" name="valordeclarado" placeholder="Informe o valor declarado"></span>
+                    </div>
+                    <div class="row">
+                        <span style="width:180px;" class="input-group-text">Aviso de Recebimento:</span>
+                        <span id="avisoDeRecebimento">
+                            <select name="avisorecebimento" size="1">
+                                <option value="S">Sim</option>
+                                <option value="N">Não</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="row btn-group w-100">
+                        <input id="Button" class="btn btn-dark" type="SUBMIT" name="BTN" value="Consultar" />
+                        <div id="divAlert">
+
+                        </div>
+                    </div>
+
+                </form>
             </div>
-            <div>
-                <span style="width:130px;">Senha:</span>
-                <span><input type="password" name="senha" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Serviços:</span>
-                <span><input type="text" name="servicos" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Cep Origem:</span>
-                <span><input type="text" name="cepori" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Cep Destino:</span>
-                <span><input type="text" name="cepdes" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Peso:</span>
-                <span><input type="text" name="peso" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Formato:</span>
-                <span>
-                    <select name="formato" size="1">
-                        <option value="1">Caixa/pacote</option>
-                        <option value="2">Rolo/prisma</option>
-                    </select>
-                </span>
-            </div>
-            <div>
-                <span style="width:130px;">Comprimento:</span>
-                <span><input type="text" name="comprimento" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Altura:</span>
-                <span><input type="text" name="altura" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Largura:</span>
-                <span><input type="text" name="largura" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Diâmetro:</span>
-                <span><input type="text" name="diametro" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Mão própria:</span>
-                <span>
-                    <select name="maopropria" size="1">
-                        <option value="S">Sim</option>
-                        <option value="N">Não</option>
-                    </select>
-                </span>
-            </div>
-            <div>
-                <span style="width:130px;">Valor declarado:</span>
-                <span><input type="text" name="valordeclarado" value=""></span>
-            </div>
-            <div>
-                <span style="width:130px;">Aviso de Recebimento:</span>
-                <span>
-                    <select name="avisorecebimento" size="1">
-                        <option value="S">Sim</option>
-                        <option value="N">Não</option>
-                    </select>
-                </span>
-            </div>
-            <div>
-                <span><input type="SUBMIT" name="BTN" value="Consultar" ID="Submit1"></span>
-            </div>
-        </fieldset>
-    </form>
+        </div>
+    </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
