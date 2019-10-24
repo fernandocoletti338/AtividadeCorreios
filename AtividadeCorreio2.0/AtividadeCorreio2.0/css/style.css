@@ -1,0 +1,10 @@
+﻿body {
+    height: 170px;
+    background-image: url('https://img.olhardigital.com.br/uploads/acervo_imagens/2019/08/r16x9/20190821110623_1200_675_-_correios.jpg');
+    background-size: 100%;
+}
+
+#span{
+    font-size: 30px;
+}
+
