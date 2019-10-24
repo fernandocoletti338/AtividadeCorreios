@@ -2,10 +2,11 @@
 $(document).ready(function () {
     //adicionando uma função ao click do botão
     $('#Button').click(function () {
-
+        debugger
      
         //conectando com api web
         var nCdEmpresa = $('#codigo').val();
+        var sDsSenha = $('#senha').val();
         var nCdServico = $('#servico').val();
         var cepOrigem = $('#cepOrigem').val();
         var cepDestino = $('#cepDestino').val();
@@ -26,7 +27,7 @@ $(document).ready(function () {
         //nCdServico=04510&sCepDestino=" + cepDestino + "&sCepOrigem=" + cepOrigem   tesmo nosso "where" que passa as informações 
         //para nossa base de dados
 
-        var url = "http://usysweb.com.br/api/correiosambev.php?nCdServico=" + nCdServico + "&sCepDestino=" + cepDestino + "&sCepOrigem=" + cepOrigem + "&nVlPeso=" + nVlPeso + "&nCdFormato=" + nCdFormato + "&nVlComprimento=" + nVlComprimento + "&nVlAltura=" + nVlAltura + "&nVlLargura=" + nVlLargura;
+        var url = "http://usysweb.com.br/api/correiosambev.php?nCdServico=" + nCdServico + "&sCepDestino=" + cepDestino + "&sCepOrigem=" + cepOrigem + "&nVlPeso=" + nVlPeso + "&nCdFormato=" + nCdFormato + "&nVlComprimento=" + nVlComprimento + "&nVlAltura=" + nVlAltura + "&nVlLargura=" + nVlLargura + "&StrRetorno=xml&nIndicaCalculo=3"; 
 
         $.getJSON(url, function (data) {
 
