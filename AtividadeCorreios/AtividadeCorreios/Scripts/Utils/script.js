@@ -38,5 +38,6 @@ $(document).on('keypress', function (e) {
         $('#maoPropria').val('N');
         $('#valorDeclarado').val('0');
         $('#avisoDeRecebimento').val('N');
+
     }
 });
