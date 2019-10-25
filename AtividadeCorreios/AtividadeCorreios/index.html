@@ -11,137 +11,162 @@
     <div class="container-fluid">
         <div class="row d-flex align-content-center justify-content-center h-100">
             <div class="col-md-4">
-                <div class="card card-block">
-                    <div class="card-header">
-                        <span id="span">Calculo de Frete</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="col-md-12">
-                            <div class="row w-100">
-                                <div class="col-md-6">
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Codigo:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Senha:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Serviços:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Cep Origem:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Cep Destino:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Peso:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Formato:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Comprimento:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Altura:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Largura:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Diâmetro:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Aviso recebimento:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Valor declarado:</span>
-                                    </div>
-                                    <div class="row w-100">
-                                        <span style="width:180px;" class="input-group-text">Mão própria:</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row w-100">
-                                        <input id="codigo" class="form-control w-100" type="text" name="codigo" placeholder="Informe o codigo">
-                                    </div>
-                                    <div class="row w-100">
-                                        <input id="senha" class="form-control w-100" type="password" name="senha" placeholder="Informe a senha">
-                                    </div>
-                                    <div class="row w-100">
-                                        <select name="servico" class="form-control w-100" id="servico" size="1">
-                                            <option value="04014">SEDEX à vista</option>
-                                            <option value="04065">SEDEX à vista pagamento na entrega</option>
-                                            <option value="04510">PAC à vista</option>
-                                            <option value="04707">PAC à vista pagamento na entrega</option>
-                                            <option value="40169">SEDEX 12 ( à vista e a faturar)*</option>
-                                            <option value="40215">SEDEX 10 (à vista e a faturar)*</option>
-                                            <option value="40290">SEDEX Hoje Varejo*</option>
-                                        </select>
-                                    </div>
-                                    <div class="row w-100">
-                                        <input id="cepOrigem" class="form-control w-100" type="text" name="cepori" placeholder="Informe cep origem">
-                                    </div>
-                                    <div class="row w-100">
-                                        <input id="cepDestino" class="form-control w-100" type="text" name="cepdes" placeholder="Informe cep destino">
-                                    </div>
-                                    <div class="row w-100">
-                                        <input id="peso" class="form-control w-100" type="text" name="peso" placeholder="Informe peso">
-                                    </div>
-                                    <div class="row w-100">
-                                        <select name="formato" class="form-control w-100" id="formato" size="1">
-                                            <option value="1">Caixa/Pacote</option>
-                                            <option value="2">Rolo/Prisma</option>
-                                            <option value="3">Envelope</option>
-                                        </select>
-                                    </div>
-                                    <div class="row w-100">
-                                        <input id="comprimento" class="form-control w-100" type="text" name="comprimento" placeholder="Informe comprimento">
-                                    </div>
-                                    <div class="row w-100">
-                                        <input id="altura" class="form-control w-100" type="text" name="altura" placeholder="Informe a altura">
-                                    </div>
-                                    <div class="row w-100">
-                                        <input id="largura" class="form-control w-100" type="text" name="largura" placeholder="Informe a largura">
-                                    </div>
-                                    <div class="row w-100">
-                                        <input id="diametro" class="form-control w-100" type="text" name="diametro" placeholder="Informe o diametro">
-                                    </div>
-                                    <div class="row w-100">
-                                        <select id="avisoDeRecebimento" class="form-control w-100" name="avisorecebimento" size="1">
-                                            <option value="S">Sim</option>
-                                            <option value="N">Não</option>
-                                        </select>
-                                    </div>
-                                    <div class="row w-100">
-                                        <input id="valorDeclarado" class="form-control w-100" type="text" name="valordeclarado" placeholder="Informe valor">
-                                    </div>
-                                    <div class="row w-100">
-                                        <select id="maoPropria" class="form-control w-100" name="maopropria" size="1">
-                                            <option value="S">Sim</option>
-                                            <option value="N">Não</option>
-                                        </select>
-                                    </div>
-                                </div>
+                <form name="formenviar" method="get" send-post="correiosambev">
+                    <div class="card card-block">
+                        <div class="card-header">
+                            <span id="span">Calculo de Frete</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="col-md-12">
                                 <div class="row w-100">
-                                    <input id="Button" class="btn-dark form-control ml-3 mt-2 w-90" type="SUBMIT" name="BTN" value="Consultar" />
-                                    <div id="divAlert">
+                                    <div class="col-md-6">
+
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Codigo:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Senha:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Serviços:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Cep Origem:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Cep Destino:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Peso:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Formato:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Comprimento:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Altura:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Largura:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Diâmetro:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Aviso recebimento:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Valor declarado:</span>
+                                        </div>
+                                        <div class="row w-100">
+                                            <span style="width:180px;" class="input-group-text">Mão própria:</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row w-100">
+                                            <input id="codigo" class="form-control w-100" type="text" name="nCdEmpresa" placeholder="Informe o codigo">
+                                        </div>
+                                        <div class="row w-100">
+                                            <input id="senha" class="form-control w-100" type="password" name="sDsSenha" placeholder="Informe a senha">
+                                        </div>
+                                        <div class="row w-100">
+                                            <select name="nCdServico" class="form-control w-100" id="servico" size="1">
+                                                <option value="04014">SEDEX à vista</option>
+                                                <option value="04065">SEDEX à vista pagamento na entrega</option>
+                                                <option value="04510">PAC à vista</option>
+                                                <option value="04707">PAC à vista pagamento na entrega</option>
+                                                <option value="40169">SEDEX 12 ( à vista e a faturar)*</option>
+                                                <option value="40215">SEDEX 10 (à vista e a faturar)*</option>
+                                                <option value="40290">SEDEX Hoje Varejo*</option>
+                                            </select>
+                                        </div>
+                                        <div class="row w-100">
+                                            <input id="cepOrigem" class="form-control w-100" type="text" name="sCepOrigem" placeholder="Informe cep origem">
+                                        </div>
+                                        <div class="row w-100">
+                                            <input id="cepDestino" class="form-control w-100" type="text" name="sCepDestino" placeholder="Informe cep destino">
+                                        </div>
+                                        <div class="row w-100">
+                                            <input id="peso" class="form-control w-100" type="text" name="nVlPeso" placeholder="Informe peso">
+                                        </div>
+                                        <div class="row w-100">
+                                            <select name="nCdFormato" class="form-control w-100" id="formato" size="1">
+                                                <option value="1">Caixa/Pacote</option>
+                                                <option value="2">Rolo/Prisma</option>
+                                                <option value="3">Envelope</option>
+                                            </select>
+                                        </div>
+                                        <div class="row w-100">
+                                            <input id="comprimento" class="form-control w-100" type="text" name="nVlComprimento" placeholder="Informe comprimento">
+                                        </div>
+                                        <div class="row w-100">
+                                            <input id="altura" class="form-control w-100" type="text" name="nVlAltura" placeholder="Informe a altura">
+                                        </div>
+                                        <div class="row w-100">
+                                            <input id="largura" class="form-control w-100" type="text" name="nVlLargura" placeholder="Informe a largura">
+                                        </div>
+                                        <div class="row w-100">
+                                            <input id="diametro" class="form-control w-100" type="text" name="nVlDiametro" placeholder="Informe o diametro">
+                                        </div>
+                                        <div class="row w-100">
+                                            <select id="avisoDeRecebimento" class="form-control w-100" name="sCdAvisoRecebimento" size="1">
+                                                <option value="S">Sim</option>
+                                                <option value="N">Não</option>
+                                            </select>
+                                        </div>
+                                        <div class="row w-100">
+                                            <input id="valorDeclarado" class="form-control w-100" type="text" name="nVlValorDeclarado" placeholder="Informe valor">
+                                        </div>
+                                        <div class="row w-100">
+                                            <select id="maoPropria" class="form-control w-100" name="sCdMaoPropria" size="1">
+                                                <option value="S">Sim</option>
+                                                <option value="N">Não</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="row w-100">
+                                        <input id="Button" class="btn-dark form-control ml-3 mt-2 w-90" type="button" name="bntconsultar" value="Consultar" data-toggle="modal" data-target="#modalExemplo" />
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>                    
-                </div>                
-            </div>            
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
 
 
+    <!-- Modal -->
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Resultado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p name="Valor"></p>
+                    <p name="PrazoEntrega"></p>
+                    <p name="ValorSemAdicionais"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/popper.js"></script>
     <script src="Scripts/Utils/script.js"></script>
 
 </body>
